@@ -1,5 +1,10 @@
 # AWS CLI로 lambda ( Java ) 배포하기
 
+- Eclipse Toolkit을 이용한 배포를 권장하지만, 최신 Eclipse 버전 ( 2021 이후 버전 )에서는 지원이 안되는 이슈가 있습니다.
+- 특정 Eclipse버전 에서는 java 11 버전을 지원하지 않는 등의 이슈가 끊이질 않기 때문에
+- Toolkit을 이용하는 것보다 직접 cli를 사용해서 배포하는 것이 정신건강에 도움이 많이 됩니다.
+
+
 ## 준비물
 
 - AWS CLI ( aws와 통신 )
