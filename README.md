@@ -4,6 +4,30 @@
 - 특정 Eclipse버전 에서는 java 11 버전을 지원하지 않는 등의 이슈가 끊이질 않기 때문에
 - Toolkit을 이용하는 것보다 직접 cli를 사용해서 배포하는 것이 정신건강에 도움이 많이 됩니다.
 
+## 목차
+
+- [AWS CLI로 lambda ( Java ) 배포하기](#aws-cli로-lambda--java--배포하기)
+  - [목차](#목차)
+  - [준비물](#준비물)
+  - [aws-cli 설정하기](#aws-cli-설정하기)
+    - [IAM User 생성 ( * .csv 저장 필수 ! )](#iam-user-생성---csv-저장-필수--)
+    - [aws-cli 설치](#aws-cli-설치)
+      - [Mac & Linux](#mac--linux)
+      - [Windows](#windows)
+    - [aws-cli에 IAM user 연동하기](#aws-cli에-iam-user-연동하기)
+  - [S3 버킷 생성하기 ( * 버킷 이름 기록 !)](#s3-버킷-생성하기---버킷-이름-기록-)
+    - [AWS Console로 버킷 생성](#aws-console로-버킷-생성)
+    - [aws-cli로 버킷 생성](#aws-cli로-버킷-생성)
+  - [maven으로 프로젝트 생성하기](#maven으로-프로젝트-생성하기)
+    - [IAM Role 생성 ( * ARN 기억 )](#iam-role-생성---arn-기억-)
+    - [maven cli 로 프로젝트 시작하기](#maven-cli-로-프로젝트-시작하기)
+    - [Java의 샘플 Lambda 애플리케이션fh 시작하기](#java의-샘플-lambda-애플리케이션fh-시작하기)
+    - [Maven 빌드하기 ( * .jar 파일 생성 )](#maven-빌드하기---jar-파일-생성-)
+  - [AWS CLI로 람다 파일 배포하기](#aws-cli로-람다-파일-배포하기)
+    - [S3 버킷 ( hello-lambda-8376 )에 .jar파일 올리기](#s3-버킷--hello-lambda-8376-에-jar파일-올리기)
+      - [올라간 hello-lambda.jar 파일 확인하기](#올라간-hello-lambdajar-파일-확인하기)
+    - [Lambda 함수 배포하기](#lambda-함수-배포하기)
+      - [hello-lambda 배포 확인하기](#hello-lambda-배포-확인하기)
 
 ## 준비물
 
